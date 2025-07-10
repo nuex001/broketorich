@@ -19,4 +19,8 @@ export default defineConfig({
       }
     }
   },
+  define: {
+    // Make sure environment variables are available in the build
+    'import.meta.env.VITE_PROJECTID': JSON.stringify(process.env.VITE_PROJECTID || 'your-project-id'),
+  }
 });
