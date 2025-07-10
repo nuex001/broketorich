@@ -11,6 +11,8 @@ import {
 import { WagmiProvider } from "wagmi";
 import { bsc } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import 'process';
+
 
 const config = getDefaultConfig({
   appName: "BrokeToRich",
