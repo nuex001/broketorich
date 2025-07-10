@@ -5,10 +5,18 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: 'src/main.jsx',       // where your `ReactDOM.render` or `createRoot` is
+      entry: 'src/main.jsx',
       name: 'ReactPresaleWidget',
       fileName: 'widget',
-      formats: ['iife'],           // embeddable in <script> tag
+      formats: ['iife'],
     },
+    rollupOptions: {
+      // Don't externalize React and ReactDOM for IIFE builds
+      external: [],
+      output: {
+        // Ensure globals are properly set
+        globals: {}
+      }
+    }
   },
 });
