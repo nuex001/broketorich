@@ -18,7 +18,8 @@ export default defineConfig({
     },
   },
   define: {
-    'process.env': {},
+    'process.env': {},           // this was already there
+    process: 'process',          // ➡️ ADD THIS
     global: 'globalThis',
   },
   resolve: {
