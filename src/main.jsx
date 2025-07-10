@@ -14,10 +14,10 @@ import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
 const config = getDefaultConfig({
   appName: "BrokeToRich",
-  projectId: import.meta.env.VITE_PROJECTID,
+  projectId: "aac38f12829e8f9cc02d3e10d2e83746",
   chains: [bsc],
 });
-const queryClient = new QueryClient();
+const queryClient = new QueryClient();cle
 
 // Widget initialization function
 function initWidget(containerId = 'widget-container') {

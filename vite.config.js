@@ -11,18 +11,19 @@ export default defineConfig({
       formats: ['iife'],
     },
     rollupOptions: {
-      // Don't externalize React and ReactDOM for IIFE builds
       external: [],
       output: {
-        // Ensure globals are properly set
-        globals: {}
-      }
-    }
+        globals: {},
+      },
+    },
   },
   define: {
-    // Define process.env for the build
     'process.env': {},
-    // Remove the problematic import.meta.env reference
     global: 'globalThis',
-  }
+  },
+  resolve: {
+    alias: {
+      process: 'process/browser',
+    },
+  },
 });
