@@ -1,3 +1,5 @@
+import 'process';
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
@@ -11,7 +13,6 @@ import {
 import { WagmiProvider } from "wagmi";
 import { bsc } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-import 'process';
 
 
 const config = getDefaultConfig({
@@ -19,7 +20,7 @@ const config = getDefaultConfig({
   projectId: "aac38f12829e8f9cc02d3e10d2e83746",
   chains: [bsc],
 });
-const queryClient = new QueryClient();cle
+const queryClient = new QueryClient();
 
 // Widget initialization function
 function initWidget(containerId = 'widget-container') {
