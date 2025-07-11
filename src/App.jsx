@@ -47,7 +47,7 @@ function App() {
 
   useEffect(() => {
     if (walletClient) {
-      setStage(2);
+      setStage(1);
     } else {
       setStage(0);
     }
