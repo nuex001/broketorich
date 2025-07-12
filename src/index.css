@@ -10,14 +10,14 @@
   font-family: "Orbitron", sans-serif;
  */
 
-/* body {
+body {
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #073b05;
-} */
+}
 .container {
   width: 600px;
   min-height: 400px;
@@ -52,8 +52,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
-  background: #fff;
+  color: #fff;
+  background: #000;
   border: none;
   outline: none;
   border-radius: 5px;
@@ -88,6 +88,13 @@
   font-size: 3em;
   font-weight: 600;
   text-align: center;
+  font-family: "Orbitron", sans-serif;
+}
+.container .second_Section h3 {
+  font-size: 2.6em;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
 }
 
 .container .second_Section input {
