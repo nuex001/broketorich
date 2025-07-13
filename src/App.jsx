@@ -46,7 +46,7 @@ function App() {
 
   const backFunc = (e) => {
     e.preventDefault();
-    setStage(1);
+    setStage(0);
   };
 
  
@@ -82,14 +82,27 @@ const onchangeFunc = (e) => {
       errorMsgs("Please connect your wallet first.");
     }
   }
+
   useEffect(() => {
+    const savedStage = sessionStorage.getItem("stage");
+  
     if (walletClient) {
-      setStage(1);
+      if (savedStage === "2") {
+        setStage(2);
+      } else {
+        setStage(1);
+      }
     } else {
       setStage(0);
     }
-    setTokenAmount(0);
+  
+    setTokenAmount(0); // Reset token amount when wallet status changes
   }, [walletClient]);
+  
+  useEffect(() => {
+    sessionStorage.setItem("stage", String(stage));
+  }, [stage]);
+
 
   return (
     <div className="container">
@@ -114,7 +127,9 @@ const onchangeFunc = (e) => {
           />
 
           <button>Buy</button>
-          {/* <ConnectButton /> */}
+          <button className="back_btn" onClick={backFunc}>
+            Back
+          </button>
         </form>
       ) : (
         <div className="success_cont">

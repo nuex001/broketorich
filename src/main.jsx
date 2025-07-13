@@ -16,6 +16,7 @@ const config = getDefaultConfig({
   appName: "BrokeToRich",
   projectId: import.meta.env.VITE_PROJECTID,
   chains: [bsc],
+  ssr: true,
 });
 const queryClient = new QueryClient();
 
@@ -28,9 +29,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           overlayBlur: "small",
         })}
       >
-        <React.StrictMode>
           <App />
-        </React.StrictMode>
       </RainbowKitProvider>
     </QueryClientProvider>
   </WagmiProvider>
