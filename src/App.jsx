@@ -122,7 +122,7 @@ const onchangeFunc = (e) => {
           <img src="./logo.png" alt="" />
           </h3>
           <input
-            type="tel"
+            type="text"
             placeholder="Enter BNB amount (e.g. 0.1)"
             onChange={onchangeFunc}
             required
