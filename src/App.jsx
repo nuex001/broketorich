@@ -118,7 +118,9 @@ const onchangeFunc = (e) => {
       ) : stage === 1 ? (
         <form className="second_Section" onSubmit={buyIntoPresle}>
          <h2>Price: 1 BTR = 0.00001 BNB</h2>
-         <h3>You will receive {tokenAmount}BTR</h3>
+         <h3>You will receive {tokenAmount} BTR
+          <img src="./logo.png" alt="" />
+          </h3>
           <input
             type="tel"
             placeholder="Enter BNB amount (e.g. 0.1)"

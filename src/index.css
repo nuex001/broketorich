@@ -88,13 +88,20 @@ body {
   font-size: 3em;
   font-weight: 600;
   text-align: center;
-  font-family: "Orbitron", sans-serif;
+  /* font-family: "Orbitron", sans-serif; */
 }
 .container .second_Section h3 {
   font-size: 2.6em;
   font-weight: 600;
+  display: flex;
+  align-self: center;
   text-align: center;
+  letter-spacing: -0.5px;
   font-family: "Orbitron", sans-serif;
+}
+.container .second_Section h3 img{
+object-fit: contain;
+height: 30px;
 }
 
 .container .second_Section input {
